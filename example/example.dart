@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             child: const Text(
-              'Start Loding',
+              'Start Loading',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
