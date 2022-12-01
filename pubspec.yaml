@@ -1,6 +1,6 @@
 name: custom_gif_loading
 description: A new Flutter Custom GIF Loading Package
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/BipinLimbasiya/custom_gif_loading
 
 environment:

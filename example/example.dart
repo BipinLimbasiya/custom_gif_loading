@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               //If click to button then loading is start.
               Loading(gif).start(context);
-              Future.delayed(const Duration(seconds: 60), () {
+              Future.delayed(const Duration(seconds: 5), () {
                 //After 5 second loding is stop.
                 Loading.stop();
               });
