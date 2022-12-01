@@ -2,6 +2,8 @@
 
 A customizable, simple, and easy to use loading with your GIF file.
 
+![myfile](https://raw.githubusercontent.com/BipinLimbasiya/custom_gif_loading/main/assets/GIF/gif.gif)
+
 ## Installing #
 
 Add this to your package's pubspec.yaml file:
