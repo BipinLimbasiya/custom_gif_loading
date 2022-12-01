@@ -1,99 +1,46 @@
 ## Getting started
 
-A Flutter package to show custom gif loading with your gif file
+A customizable, simple, and easy to use loading with your GIF file.
 
-## Features
+## Installing #
 
-- Create a gif varible with initialize gif file in assets : Image gif = Image.asset('assets/GIF/Spinner.gif');
+Add this to your package's pubspec.yaml file:
 
-- Start the loading in the overly display : Loading(gif).start(context);
+```dart
+dependencies:
+  custom_gif_loading: ^latest
+```
 
-- Stop the loading : Loading.stop();
-
-
-## Example
+## Import #
 
 ```dart
 import 'package:custom_gif_loading/custom_gif_loading.dart';
-import 'package:flutter/material.dart';
+```
 
-void main() {
-  runApp(const MyApp());
-}
+## How to use #
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+First, Add your GIF file in asset :
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Custom GIF Loading Example',
-      showSemanticsDebugger: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
-    );
-  }
-}
+```dart
+ Image gif = Image.asset('add your gif file');
+```
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required});
+Then, Start the loading with pass your gif:
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+```dart
+ Loading(gif).start(context);
+```
 
-class _MyHomePageState extends State<MyHomePage> {
-  //Add your GIF file with gif variable
-  Image gif = Image.asset('assets/GIF/Spinner.gif');
+Stop the loading:
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        title: const Text(
-          'Custom GIF Loading Example',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-      ),
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              //If click to button then loading is start.
-              Loading(gif).start(context);
-              Future.delayed(const Duration(seconds: 5), () {
-                //After 5 second loding is stop.
-                Loading.stop();
-              });
-            },
-            style: ElevatedButton.styleFrom(
-              primary: Colors.blueAccent,
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-              onPrimary: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-            ),
-            child: const Text(
-              'Start Loading',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
+```dart
+  Loading.stop();
+```
+
+## Customize #
+
+```dart
+  Image gif = Image.asset('add your gif file');
 ```
 
 
-## Additional information
-
-## Usage

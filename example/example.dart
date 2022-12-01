@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Custom GIF Loading Example',
+      title: 'Custom GIF Loading',
       showSemanticsDebugger: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -39,12 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: const Text(
-          'Custom GIF Loading Example',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          'Custom GIF Loading',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
       body: Container(
+        margin: const EdgeInsets.only(top: 34),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Center(
@@ -52,22 +54,23 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               //If click to button then loading is start.
               Loading(gif).start(context);
-              Future.delayed(const Duration(seconds: 5), () {
+              Future.delayed(const Duration(seconds: 60), () {
                 //After 5 second loding is stop.
                 Loading.stop();
               });
             },
             style: ElevatedButton.styleFrom(
               primary: Colors.blueAccent,
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 18),
               onPrimary: Colors.white,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(12),
               ),
             ),
             child: const Text(
-              'Start Loading',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              'Start Loding',
+              style: TextStyle(
+                  fontSize: 16, fontWeight: FontWeight.bold, letterSpacing: 1),
             ),
           ),
         ),
