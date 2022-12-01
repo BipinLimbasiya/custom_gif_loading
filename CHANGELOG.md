@@ -1,3 +1,6 @@
 ## 0.0.1
+- init
 
-init
+## 0.0.2
+- fixed bugs
+
